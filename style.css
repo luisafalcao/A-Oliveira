@@ -1,0 +1,128 @@
+@import url(https://db.onlinewebfonts.com/c/8ee93ab6e2cd0e81a9ed137d534ac8ab?family=Albra+Grotesk+Medium-Traced-Web);
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Albra Grotesk Medium-Traced-Web";
+}
+
+header {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15% auto 15%;
+    grid-template-columns: 1fr
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar--wrapper {
+    background-color: grey;
+    width: 100%;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.top-bar--wrapper h6,
+.top-bar--wrapper p {
+    margin: 0;
+}
+
+.navigation {
+    display: flex; /* pra centralizar o conteúdo verticalmente */
+}
+
+.nav-list {
+    position: relative;
+    width: 80%;
+    /* max-width: 800px; */
+    margin: auto;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+@media screen and (min-width: 1150px) {
+    .nav-list {
+        font-size: 5rem;
+    }
+}
+@media screen and (min-width: 1350px) {
+    .nav-list {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (min-width: 880px) {
+    .nav-list {
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+.nav-item.historia {
+    grid-column: 1 / 5;
+    /* background-color: blue; */
+}
+
+.nav-item.historia::after {
+    /* grid-row: 1 / 1; */
+    grid-column: 4 / span 3;
+    grid-row: 1 / 1;
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 100%;
+    border: 0.7px solid rgba(0, 0, 0, .5);
+    height: 77%;
+    margin: auto 10px;
+    /* background-color: green; */
+}
+
+.nav-item.projetos {
+    grid-column: -1 / 6;
+    text-align: right;
+    /* background-color: red; */
+}
+
+.nav-item.servicos {
+    grid-column: 3 / 7;
+    text-align: center;
+}
+
+.nav-item.clientes {
+    grid-column: 1 / 5
+}
+
+.nav-item.estrutura {
+    grid-column: 5 / -1;
+    text-align: right;
+}
+
+.nav-item.fornecedores {
+    grid-column: 3 / -1;
+    text-align: center;
+}
+
+header .svg-placeholder {
+    background-color: black;
+    height: 2rem;
+    width: 30%;
+    margin: auto;
+}
+
