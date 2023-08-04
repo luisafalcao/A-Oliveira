@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <div class="top-bar--wrapper">
+        <div class="top-bar">
             <div class="left">
                 <small>
                     Rua Okir, 57, Jardim Alvorada, Nova Iguaçu<br>
@@ -31,24 +31,44 @@
         <nav class="navigation">
             <ul class="nav-list">
                 <li class="nav-row">
-                    <a href="#" class="nav-item historia">História</a>
-                    <span></span>
-                    <a href="#" class="nav-item projetos">Projetos</a>
+                    <div class="nav-link--wrapper">
+                        <a href="#history" class="nav-link">História</a>
+                        <span class="two-rows"></span>
+                    </div>
+                    <span class="one-row"></span>
+                    <div class="nav-link--wrapper">
+                        <span class="two-rows"></span>
+                        <a href="#projects" class="nav-link">Projetos</a>
+                    </div>
                 </li>
                 <li class="nav-row">
-                    <span></span>
-                    <a href="#" class="nav-item servicos">Serviços</a>
-                    <span></span>
+                    <span class="one-row"></span>
+                    <div class="nav-link--wrapper">
+                        <span class="two-rows"></span>
+                        <a href="#services" class="nav-link">Serviços</a>
+                        <span class="two-rows"></span>
+                    </div>
+                    <span class="one-row"></span>
                 </li>
                 <li class="nav-row">
-                    <a href="#" class="nav-item clientes">Clientes</a>
-                    <span></span>
-                    <a href="#" class="nav-item estrutura">Estrutura</a>
+                    <div class="nav-link--wrapper">
+                        <a href="#clients" class="nav-link">Clientes</a>
+                        <span class="two-rows"></span>
+                    </div>
+                    <span class="one-row"></span>
+                    <div class="nav-link--wrapper">
+                        <span class="two-rows"></span>
+                        <a href="#structure" class="nav-link">Estrutura</a>
+                    </div>
                 </li>
                 <li class="nav-row">
-                    <span></span>
-                    <a href="#" class="nav-item fornecedores">Fornecedores</a>
-                    <span></span>
+                    <span class="one-row"></span>
+                    <div class="nav-link--wrapper">
+                        <span class="two-rows"></span>
+                        <a href="#suppliers" class="nav-link">Fornecedores</a>
+                        <span class="two-rows"></span>
+                    </div>
+                    <span class="one-row"></span>
                 </li>
             </ul>
         </nav>
@@ -57,7 +77,7 @@
     </header>
     
     <main>
-        <section class="history-section">
+        <section id="history" class="history-section">
             <div class="section-row">
                 <img class="history-graphic" src="img/40anos.svg" alt="40 anos de entrega segura, ágil, de extrema objetividade e eficiência">
                 <div class="history-title--wrapper">
@@ -83,7 +103,7 @@
             </figure>
         </section>
 
-        <section class="energy-section">
+        <section id="energy" class="energy-section">
             <div class="energy-grid--container">
                 <h2>Energia <br>
                     <span class="green">Verde</span>
@@ -117,13 +137,13 @@
             </div>
         </section>
 
-        <section class="projects-section section-padding">
+        <section id="projects" class="projects-section section-padding">
             <h2>Realizações</h2>
             <h3>Projetos</h3>
             <p class="large number"><span>+</span>375.220</p>
         </section>
 
-        <section class="clients-section section-padding">
+        <section id="clients" class="clients-section section-padding">
             <div class="clients-title--wrapper">
                 <h3>Clientes</h3>
                 <p class="medium number"><span>+</span>12.000</p>
@@ -145,7 +165,7 @@
             </div>
         </section>
 
-        <section class="suppliers-section section-padding">
+        <section id="suppliers" class="suppliers-section section-padding">
             <h3>Fornecedores</h3>
             <div class="logos--grid">
                 <img src="img/fornecedores/onix.png" alt="">
@@ -165,7 +185,7 @@
             </div>
         </section>
 
-        <section class="services-section section-padding">
+        <section id="services" class="services-section section-padding">
             <h2 class="title">Serviços</h2>
             <ul class="list">
                 <li class="list-item">Projetos de instalações elétricas média e alta tensão</li>              
@@ -188,7 +208,7 @@
             </ul>
         </section>
 
-        <section class="structure-section section-padding">
+        <section id="structure" class="structure-section section-padding">
             <div class="structure-text--wrapper">
                 <h2>Estrutura</h2>
                 <img src="img/estrutura.svg" class="structure-graphic"></img>
@@ -202,13 +222,15 @@
             </ul>
         </section>
 
-        <section class="address-section section-padding">
-            <small>Rua Okir, 57, Jardim Alvorada, Nova Iguaçu<br>
-                Rio de Janeiro - RJ, 26261-380</small>
-        </section>
-
-        <section class="end-section section-padding">
-            <img src="img/40anos-branco.svg" alt="">
+        <section class="photo-section">
+            <div class="section-padding">
+                <small>Rua Okir, 57, Jardim Alvorada, Nova Iguaçu<br>
+                    Rio de Janeiro - RJ, 26261-380
+                </small>
+            </div>
+            <div>
+                <img src="img/40anos-branco.svg" alt="">
+            </div>
         </section>
     </main>
     
