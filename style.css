@@ -481,13 +481,18 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30
     background-origin: content-box;
 }
 
+.servicos-section h2,
 .projetos-section h2 {
     font-size: 8rem;
+    text-align: right;
+    word-break: break-all;
 }
 
 .projetos-section,
 .clientes-section,
-.fornecedores-section {
+.fornecedores-section,
+.servicos-section,
+.estrutura-section {
     padding: 0 var(--min-padding);
     letter-spacing: .5rem;
 }
@@ -496,11 +501,6 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30
 .clientes-section > *,
 .fornecedores-section > * {
     margin: 0;
-}
-
-.projetos-section .title {
-    text-align: right;
-    word-break: break-all;
 }
 
 .clientes-title--wrapper {
@@ -513,28 +513,6 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30
 .clientes-section p {
     display: inline-block;
 }
-
-/* .projetos-section .subtitle::before {
-    position: absolute;
-    content: '';
-    border: 0.7px solid rgba(0, 0, 0, .5);
-    height: 300px;
-    width: 300px;
-    top: -1rem;
-    left: -1rem;
-}
-
-.projetos-section .subtitle::after {
-    position: absolute;
-    content: '◼';
-    color: orange;
-    font-size: 200%;
-    width: 300%;
-    height: 1px;
-    left: calc(300px - 1rem);
-    top: 50%;
-    background-color: rgba(0, 0, 0, .5);
-} */
 
 .logos--grid {
     width: 80%;
@@ -583,4 +561,51 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30
     top: 50%;
     left: 40%;
     background-color: var(--gray);
+}
+
+.servicos-section h2 {
+    line-height: 1;
+    border: 1px solid var(--gray);
+    padding: 2rem 2rem 1rem;
+    position: relative;
+}
+
+.servicos-section h2::before {
+    position: absolute;
+    content: '';
+    background-color: var(--gray);
+    width: 50%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+}
+
+.lista-item {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.lista-item::after {
+    position: absolute;
+    content: '';
+    background-color: var(--gray);
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.estrutura-text--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.estrutura-text--wrapper small {
+    text-align: justify;
 }
