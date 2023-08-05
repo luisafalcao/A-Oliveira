@@ -25,7 +25,9 @@
 }
 
 :root {
-    --min-padding: 5rem;
+    /* --min-padding: 5rem; */
+    --min-padding: clamp(3rem, 4rem, 5rem);
+
     --orange: #C95512;
     --green: #204A16;
     --gray: rgba(0, 0, 0, .5);
@@ -36,17 +38,19 @@
     --font-family-nav: 'Albra Grotesk Medium-Traced-Web';
     --font-family-caption: 'Source Sans 3', sans-serif;
 
-    --font-size-xl: clamp(6rem, 0.068rem + 18.983vw, 20rem); /*6rem - 20rem: .large.number*/
-    --font-size-l: clamp(4rem, -0.237rem + 13.559vw, 14rem); /*4rem - 14rem: .medium.number*/
-    --font-size-0: clamp(4rem, 1.034rem + 9.492vw, 11rem); /*4rem - 11rem: .large-title*/
-    --font-size-1: clamp(3.5rem, 1.169rem + 7.458vw, 9rem); /*3.5rem - 9rem: .title, h2*/
-    --font-size-2: clamp(3rem, 0.881rem + 6.78vw, 8rem); /*3rem - 8rem: .small-title, .nav-list*/
-    --font-size-3: clamp(1.5rem, 0.758rem + 2.373vw, 3.25rem); /*1.5rem - 3.25rem: h3*/
+    --font-size-00: clamp(6rem, 0.068rem + 18.983vw, 20rem); /*6rem - 20rem: .large.number*/
+    --font-size-0: clamp(6rem, 2.61rem + 10.847vw, 14rem); /*4rem - 14rem: .medium.number*/
+
+    --font-size-1: clamp(3.5rem, 0.958rem + 8.136vw, 9.5rem); /*3.5rem - 9.5rem: .large-title*/
+    --font-size-2-large: clamp(3.25rem, 0.814rem + 7.797vw, 9rem); /*3.25rem - 9rem: .title, h2*/
+    --font-size-2: clamp(2.5rem, 0.169rem + 7.458vw, 8rem); /*2.25rem - 7rem: .nav-list,'realizações', h2*/
+    --font-size-2-small: clamp(1.75rem, 0.373rem + 4.407vw, 5rem); /*1.75rem - 5rem: .small-title, h2*/
+    --font-size-3: clamp(1.5rem, 0.653rem + 2.712vw, 3.5rem); /*1.5rem - 3rem: h3*/
     --font-size-4: clamp(1.25rem, 0.932rem + 1.017vw, 2rem); /*1.25rem - 2rem: h4*/
     --font-size-5: clamp(1rem, 0.788rem + 0.678vw, 1.5rem); /*1rem 1.5rem: list-item, h5*/
     --font-size-body: 1.15; /*p*/
     --font-size-6: 1rem; /*contato, h6*/
-    --font-size-7: .80rem; /*small*/
+    --font-size-small: .80rem; /*small*/
 }
 
 html {
@@ -79,17 +83,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: var(--font-size-1);
+    font-size: var(--font-size-2-large);
     line-height: 1;
     margin: 0 auto;
 }
 
 h2.large-title {
-    font-size: var(--font-size-0);
+    font-size: var(--font-size-1);
+    letter-spacing: 1rem;
+}
+
+h2.medium-title {
+    font-size: var(--font-size-2);
+    letter-spacing: .5rem;
 }
 
 h2.small-title {
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-2-small);
+    letter-spacing: .5rem;
 }
 
 h3 {
@@ -131,7 +142,7 @@ ul {
 
 small {
     font-family: var(--font-family-thin);
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-small);
 }
 
 figure {
@@ -141,7 +152,7 @@ figure {
 figcaption {
     font-family: var(--font-family-caption);
     font-style: italic;
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-small);
 }
 
 @media screen and (min-width: 740px) {
@@ -324,6 +335,7 @@ figcaption {
 .section-row {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 8rem;
 }
 
@@ -368,6 +380,7 @@ figcaption {
     .section-row {
         flex-direction: row;
         gap: 0;
+        padding: var(--min-padding);
     }
     
     .section-row:nth-child(2) {
@@ -721,7 +734,7 @@ figcaption {
 
 @media screen and (min-width: 1200px) {
     .energy-section h3 {
-        grid-row-start: 12;
+        grid-row-start: 10;
     }
 
     .energy-section p:nth-of-type(1) {    
@@ -835,6 +848,30 @@ figcaption {
     margin: 0 auto;
 }
 
+.projects-section h2 {
+    text-align: left;
+}
+
+.projects-section h2.small-title,
+.clients-section h2.small-title,
+.suppliers-section h2.small-title {
+    margin: 2rem 0 1rem;
+}
+
+@media screen and (min-width: 740px) {
+    .projects-section h2.medium-title {
+        text-align: right;
+    }
+
+    .projects-section h2.small-title,
+    .clients-section h2.small-title,
+    .suppliers-section h2.small-title {
+        margin-left: var(--min-padding);
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+}
+
 /* CLIENTS SECTION */
 .clients-title--wrapper {
     background-image: url(img/clientes.svg);
@@ -842,10 +879,9 @@ figcaption {
     background-size: 50%;
     background-origin: content-box;
     background-position-x: 80%;
-}
-
-.clients-title--wrapper {
+    
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -857,7 +893,7 @@ figcaption {
 
 .number {
     font-family: 'Altmann Grotesk Medium';
-    margin: 0 auto;
+    margin: 0 0;
 }
 
 .number > span {
@@ -867,13 +903,19 @@ figcaption {
 
 .large.number {
     text-align: center;
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-00);
     line-height: 1;
 }
 
 .medium.number {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-0);
     display: inline-block;
+}
+
+@media screen and (min-width: 740px) {
+    .number {
+        margin: 0 auto;
+    }
 }
 
 /* SUPPLIERS SECTION */
@@ -892,12 +934,10 @@ figcaption {
 }
 
 .logos--grid {
-    width: 80%;
     margin: 2rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
     flex-wrap: wrap;
 }
 
@@ -906,6 +946,12 @@ figcaption {
     height: 7.5rem;
 }
 
+@media screen and (min-width: 740px) {
+    .logos--grid {
+        width: 80%;
+        gap: 4rem;
+    }
+}
 /* SERVICES SECTION */
 .services-section h2 {
     line-height: 1;
@@ -995,7 +1041,8 @@ figcaption {
 /* FOOTER */
 footer {
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: flex-start;
     align-content: start;
     gap: 2rem;
