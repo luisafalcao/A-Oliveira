@@ -408,7 +408,7 @@ figcaption {
     width: 100%;
     gap: 1rem;
     max-width: 1500px;
-    padding: var(--min-padding);
+    /* padding: var(--min-padding); */
 } 
 
 .energy-grid--container > * {
@@ -416,8 +416,8 @@ figcaption {
 }
 
 .energy-section figure > img {
-    /* width: 100%; */
-    width: 80vw;
+    width: 100%;
+    max-width: 80vw;
     height: auto;
 }
 
