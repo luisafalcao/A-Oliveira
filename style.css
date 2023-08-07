@@ -25,7 +25,8 @@
 }
 
 :root {
-    --min-padding: 5rem;
+    /* --min-padding: 5rem; */
+    --min-padding: clamp(1.5rem, 0.017rem + 4.746vw, 5rem);
     --orange: #C95512;
     --green: #204A16;
     --gray: rgba(0, 0, 0, .5);
@@ -418,7 +419,6 @@ figcaption {
 
 .energy-section figure > img {
     width: 100%;
-    max-width: 80vw;
     height: auto;
 }
 
@@ -528,6 +528,10 @@ figcaption {
         grid-row-start: 5;
         grid-column-start: 1;
         grid-column-end: 9;
+    }
+
+    .energy-section figure > img {
+        max-width: 80vw;
     }
 
 }
