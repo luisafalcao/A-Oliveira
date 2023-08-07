@@ -475,6 +475,14 @@ figcaption {
     margin-bottom: 0;
 }
 
+.timeline > *:not(.logo) {
+    flex: 1;
+}
+
+.timeline > .date-wrapper h4 {
+    text-align: left;
+}
+
 @media screen and (min-width: 740px) {
     .energy-section {
         gap: 0;
@@ -596,6 +604,10 @@ figcaption {
         margin-right: var(--min-padding);
         margin-left: 0;
         margin-bottom: 3rem;
+    }
+
+    .timeline h4 {
+        text-align: right;
     }
 
     .timeline::before {
