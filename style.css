@@ -255,7 +255,6 @@ figcaption {
 
 .nav-link--wrapper {
     display: flex;
-    gap: 1rem;
 }
 
 .nav-row span.one-row {
@@ -318,6 +317,10 @@ figcaption {
 
     .header-graphic {
         width: 50%;
+    }
+
+    .nav-link--wrapper {
+        gap: 1rem;
     }
 }
 
