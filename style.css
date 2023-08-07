@@ -479,7 +479,7 @@ figcaption {
     flex: 1;
 }
 
-.timeline > .date--wrapper h4 {
+.timeline > h4 {
     text-align: left;
 }
 
