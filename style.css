@@ -1031,6 +1031,7 @@ figcaption {
 /* FOOTER */
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     align-content: start;
@@ -1038,10 +1039,6 @@ footer {
     padding: var(--min-padding);
 }
 
-footer .logo {
-    flex: 1;
-    align-self: center;
-}
 
 footer .logo > img {
     width: 10rem;
@@ -1049,4 +1046,15 @@ footer .logo > img {
 
 footer small {
     font-size: 70%;
+}
+
+@media screen and (min-width: 740px) {
+    footer {
+        flex-direction: row;
+    }
+    
+    footer .logo {
+        flex: 1;
+        align-self: center;
+    }
 }
