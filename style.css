@@ -443,10 +443,9 @@ figcaption {
     justify-content: space-between;
     align-items: flex-end;
     flex: 0;
-    /* width: 100%; */
+    width: 100%;
     text-align: right;
     position: relative;
-    margin: 0 var(--min-padding);
     /* margin-bottom: 3rem; */
 }
 
@@ -480,7 +479,7 @@ figcaption {
     .energy-section {
         gap: 0;
     }
-    
+
     .energy-grid--container {
         aspect-ratio: 1/1;
         display: grid;
