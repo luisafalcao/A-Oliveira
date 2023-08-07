@@ -938,7 +938,7 @@ figcaption {
 
 .logos--grid img {
     width: auto;
-    height: 7.5rem;
+    height: clamp(5rem, 4.153rem + 2.712vw, 7rem);
 }
 
 /* SERVICES SECTION */
