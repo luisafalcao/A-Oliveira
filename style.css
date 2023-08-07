@@ -411,7 +411,7 @@ figcaption {
 } 
 
 .energy-grid--container > *:not(figure) {
-    padding: var(--min-padding);
+    padding: 0 var(--min-padding);
     margin: 0;
 }
 
