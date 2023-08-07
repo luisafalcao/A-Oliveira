@@ -606,6 +606,10 @@ figcaption {
         margin-bottom: 3rem;
     }
 
+    .timeline > * {
+        flex: 0;
+    }
+
     .timeline h4 {
         text-align: right;
     }
