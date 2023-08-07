@@ -619,7 +619,7 @@ figcaption {
     }
 
     .timeline > * {
-        flex: 0;
+        flex: 0 !important;
     }
 
     .timeline > h4 {
@@ -839,7 +839,9 @@ figcaption {
 .services-section h2,
 .projects-section h2 {
     text-align: right;
-    word-break: break-all;
+    /* word-break: break-all; */
+    overflow-wrap: break-word;
+    hyphens: manual;
     margin: 0 auto;
 }
 
