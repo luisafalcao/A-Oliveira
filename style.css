@@ -420,30 +420,17 @@ figcaption {
     margin: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .energy-section figure > img {
-    width: 100%;
+    /* width: 100%; */
+    width: 80vw;
     height: auto;
 }
 
-.energia-section .quote {
+.energy-section .quote {
     position: relative;
 }
 
-.energia-section .quote::before {
+.energy-section .quote::before {
     position: absolute;
     content: '';
     background-color: var(--gray);
@@ -459,6 +446,7 @@ figcaption {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    flex: 0;
     /* width: 100%; */
     text-align: right;
     position: relative;
