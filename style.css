@@ -842,6 +842,7 @@ figcaption {
     margin: 0 auto;
 }
 
+.suppliers-section h2,
 .projects-section h2 {
     overflow-wrap: break-word;
     hyphens: manual;
