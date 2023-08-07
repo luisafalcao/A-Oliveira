@@ -852,10 +852,18 @@ figcaption {
     margin-bottom: 2rem;
 }
 
+.projects-section h2.small-title {
+    text-align: center;
+}
+
 @media screen and (min-width: 740px) {
     .projects-section h2 {
         text-align: right;
         margin-bottom: 0;
+    }
+
+    .projects-section h2.small-title {
+        text-align: left;
     }
 }
 
