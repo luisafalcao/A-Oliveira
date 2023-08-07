@@ -26,7 +26,7 @@
 
 :root {
     /* --min-padding: 5rem; */
-    --min-padding: clamp(1.5rem, 0.017rem + 4.746vw, 5rem);
+    --min-padding: clamp(2rem, 0.729rem + 4.068vw, 5rem);
     --orange: #C95512;
     --green: #204A16;
     --gray: rgba(0, 0, 0, .5);
