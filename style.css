@@ -398,6 +398,7 @@ figcaption {
 .energy-section {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .energy-grid--container {
@@ -411,7 +412,7 @@ figcaption {
 } 
 
 .energy-grid--container > *:not(figure) {
-    padding: 0 var(--min-padding);
+    padding: 0 calc(var(--min-padding) / 2);
     margin: 0;
 }
 
@@ -476,6 +477,10 @@ figcaption {
 }
 
 @media screen and (min-width: 740px) {
+    .energy-section {
+        gap: 0;
+    }
+    
     .energy-grid--container {
         aspect-ratio: 1/1;
         display: grid;
