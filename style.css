@@ -408,10 +408,10 @@ figcaption {
     width: 100%;
     gap: 1rem;
     max-width: 1500px;
-    /* padding: var(--min-padding); */
 } 
 
-.energy-grid--container > * {
+.energy-grid--container > *:not(figure) {
+    padding: var(--min-padding);
     margin: 0;
 }
 
