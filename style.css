@@ -839,9 +839,11 @@ figcaption {
 .services-section h2,
 .projects-section h2 {
     text-align: right;
-    /* word-break: break-all; */
     overflow-wrap: break-word;
     hyphens: manual;
+    -webkit-hyphens: manual;
+    -webkit-hyphenate-character: "";
+    hyphenate-character: "";
     margin: 0 auto;
 }
 
