@@ -37,7 +37,7 @@
     --font-family-nav: 'Albra Grotesk Medium-Traced-Web';
     --font-family-caption: 'Source Sans 3', sans-serif;
 
-    --font-size-xl: clamp(5rem, -1.356rem + 20.339vw, 20rem); /*5rem - 20rem: .large.number*/
+    --font-size-xl: clamp(6rem, 0.068rem + 18.983vw, 20rem); /*6rem - 20rem: .large.number*/
     --font-size-l: clamp(4rem, -0.237rem + 13.559vw, 14rem); /*4rem - 14rem: .medium.number*/
     --font-size-0: clamp(4rem, 1.034rem + 9.492vw, 11rem); /*4rem - 11rem: .large-title*/
     --font-size-1: clamp(3.5rem, 1.169rem + 7.458vw, 9rem); /*3.5rem - 9rem: .title, h2*/
@@ -413,7 +413,7 @@ figcaption {
 } 
 
 .energy-grid--container > *:not(figure) {
-    padding: 0 var(--min-padding);
+    padding: 0 var(--min-padding) / 2;
     margin: 0;
 }
 
@@ -606,14 +606,6 @@ figcaption {
         margin-bottom: 3rem;
     }
 
-    .timeline > * {
-        flex: 0;
-    }
-
-    .timeline h4 {
-        text-align: right;
-    }
-
     .timeline::before {
         position: absolute;
         content: '';
@@ -624,6 +616,14 @@ figcaption {
         width: 1px;
         height: 90%;
         z-index: -1;
+    }
+
+    .timeline > * {
+        flex: 0;
+    }
+
+    .timeline > h4 {
+        text-align: center;
     }
     
 }
