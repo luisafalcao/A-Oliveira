@@ -1024,7 +1024,7 @@ figcaption {
 }
 
 .photo-section img {
-    height: 20rem;
+    height: clamp(10rem, 5.763rem + 13.559vw, 20rem);
     width: auto;
 }
 
