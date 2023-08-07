@@ -838,7 +838,7 @@ figcaption {
 
 .services-section h2,
 .projects-section h2 {
-    text-align: right;
+    text-align: left;
     overflow-wrap: break-word;
     hyphens: manual;
     -webkit-hyphens: manual;
@@ -847,6 +847,11 @@ figcaption {
     margin: 0 auto;
 }
 
+@media screen and (min-width: 740px) {
+    .projects-section h2 {
+        text-align: right;
+    }
+}
 /* CLIENTS SECTION */
 .clients-title--wrapper {
     background-image: url(img/clientes.svg);
