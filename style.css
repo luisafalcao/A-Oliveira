@@ -866,12 +866,11 @@ figcaption {
     background-size: 50%;
     background-origin: content-box;
     background-position-x: 80%;
-}
-
-.clients-title--wrapper {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .clients-section h3,
