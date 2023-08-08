@@ -106,6 +106,7 @@ body {
     font-family: var(--font-family-body);
     font-size: var(--font-size-body);
     letter-spacing: 0.056em;
+    position: relative;
 }
 
 header {
@@ -240,7 +241,7 @@ figcaption {
     width: 100%;
     background-color: var(--gray);
     opacity: .3;
-}    
+}  
 
 @media screen and (min-width: 740px) {
     .hr-line {
@@ -291,8 +292,48 @@ figcaption {
 }
 
 /* 2. Navigation */
+.hamburger-menu {
+    margin: 2rem;
+    height: 2rem;
+    width: 1.5rem;
+    height: 0;
+    pointer-events: none;
+
+    transition: height 2s linear;
+}
+
+.hamburger-menu > .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--gray);
+}
+
 .navigation {
     display: flex; /* pra centralizar o conteúdo verticalmente */
+
+    transition: transform 1.5s ease;
+}
+
+
+.navigation.sticky {
+    width: 100%;
+    transform: translateY(-150%);
+}
+
+.navigation.active {
+    transform: translateY(0%);
+}
+
+.hamburger-menu.visible {
+    pointer-events: visible;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    cursor: pointer;
 }
 
 .nav-list {
