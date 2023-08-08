@@ -1110,6 +1110,9 @@ figcaption {
     margin-bottom: 2rem;
 }
 
+h2.hr-line > span {
+    display: none;
+}
 /* .services-section h2::before {
     position: absolute;
     content: '';
@@ -1210,7 +1213,6 @@ footer {
     gap: 2rem;
     padding: var(--min-padding);
 }
-
 
 footer .logo > img {
     width: 10rem;
