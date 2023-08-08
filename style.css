@@ -1,12 +1,56 @@
-@import url(https://db.onlinewebfonts.com/c/8ee93ab6e2cd0e81a9ed137d534ac8ab?family=Albra+Grotesk+Medium-Traced-Web);
+/* @import url(https://db.onlinewebfonts.com/c/8ee93ab6e2cd0e81a9ed137d534ac8ab?family=Albra-Grotesk-Medium-Traced-Web); */
 
 @import url("https://use.typekit.net/oll3tyk.css");
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Sans+3:ital,wght@0,600;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Sans+3:ital,wght@0,1000;1,200&display=swap');
 
+@font-face{
+    font-family: "Albra-Grotesk-Medium-Traced-Web";
+    src: url("https://db.onlinewebfonts.com/t/8ee93ab6e2cd0e81a9ed137d534ac8ab.eot");
+    src: url("https://db.onlinewebfonts.com/t/8ee93ab6e2cd0e81a9ed137d534ac8ab.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/8ee93ab6e2cd0e81a9ed137d534ac8ab.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/8ee93ab6e2cd0e81a9ed137d534ac8ab.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/8ee93ab6e2cd0e81a9ed137d534ac8ab.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/8ee93ab6e2cd0e81a9ed137d534ac8ab.svg#Albra-Grotesk-Medium-Traced-Web")format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Acumin Variable Concept';
+    src: url('fonts/AcuminVariableConcept.ttf');
+}
+
+@font-face {
+    font-family: 'Acumin Variable Concept Thin';
+    src: url('fonts/AcuminVariableConcept-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'Acumin Variable Concept Wide Extra Light';
+    src: url('fonts/AcuminVariableConcept-WideExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Altmann Grotesk Thin';
+    src: url('fonts/AltmannGrotesk-Thin.ttf');
+}
+@font-face {
+    font-family: 'Altmann Grotesk Light';
+    src: url('fonts/AltmannGrotesk-Light.ttf');
+}
+@font-face {
+    font-family: 'Altmann Grotesk Regular';
+    src: url('fonts/AltmannGrotesk-Regular.ttf');
+}
 @font-face {
     font-family: 'Altmann Grotesk Medium';
     src: url('fonts/AltmannGrotesk-Medium.ttf');
+}
+@font-face {
+    font-family: 'Altmann Grotesk Bold';
+    src: url('fonts/AltmannGrotesk-Bold.ttf');
 }
 
 @font-face {
@@ -26,23 +70,24 @@
 
 :root {
     /* --min-padding: 5rem; */
-    --min-padding: clamp(2rem, 0.729rem + 4.068vw, 5rem);
+    --min-padding: clamp(2rem, 0.305rem + 5.424vw, 6rem);
     --orange: #C95512;
     --green: #204A16;
-    --gray: rgba(0, 0, 0, .5);
+    --gray: rgba(100, 100, 100, 1);
 
-    --font-family-headings: 'Altmann Grotesk Medium', sans-serif;
-    --font-family-body: 'acumin-variable', sans-serif; 
+    --font-family-headings: 'Altmann Grotesk Regular', sans-serif;
+    --font-family-body: 'Acumin Variable Concept Wide Extra Light', sans-serif; 
     --font-family-thin: 'Roboto', sans-serif;
-    --font-family-nav: 'Albra Grotesk Medium-Traced-Web';
+    --font-family-nav: 'Albra-Grotesk-Medium-Traced-Web';
     --font-family-caption: 'Source Sans 3', sans-serif;
 
+    --font-size-nav: clamp(3rem, 1.729rem + 4.068vw, 6rem); /*3rem - 8rem: .nav-list*/
     --font-size-xl: clamp(4rem, -2.78rem + 21.695vw, 20rem); /*4rem - 20rem: .large.number*/
     --font-size-l: clamp(4rem, -0.237rem + 13.559vw, 14rem); /*4rem - 14rem: .medium.number*/
     --font-size-0: clamp(4rem, 1.034rem + 9.492vw, 11rem); /*4rem - 11rem: .large-title*/
     --font-size-1: clamp(3.5rem, 1.169rem + 7.458vw, 9rem); /*3.5rem - 9rem: .title, h2*/
-    --font-size-2: clamp(3rem, 0.881rem + 6.78vw, 8rem); /*3rem - 8rem: .small-title, .nav-list*/
-    --font-size-3: clamp(1.5rem, 0.758rem + 2.373vw, 3.25rem); /*1.5rem - 3.25rem: h3*/
+    --font-size-2: clamp(3rem, 1.305rem + 5.424vw, 7rem); /*3rem - 8rem: .small-title*/
+    --font-size-3: clamp(1.75rem, 0.373rem + 4.407vw, 5rem); /*1.5rem - 3.25rem: h3*/
     --font-size-4: clamp(1.25rem, 0.932rem + 1.017vw, 2rem); /*1.25rem - 2rem: h4*/
     --font-size-5: clamp(1rem, 0.788rem + 0.678vw, 1.5rem); /*1rem 1.5rem: list-item, h5*/
     --font-size-body: 1.15; /*p*/
@@ -66,8 +111,9 @@ body {
 header {
     height: 100vh;
     display: grid;
-    grid-template-rows: 15% auto 15%;
-    grid-template-columns: 1fr
+    align-content: space-between;
+    /* grid-template-rows: 15% auto 15%;
+    grid-template-columns: 1fr */
 }
 
 section {
@@ -83,6 +129,7 @@ h2 {
     font-size: var(--font-size-1);
     line-height: 1;
     margin: 0 auto;
+    letter-spacing: clamp(0.2rem, -0.054rem + 0.814vw, 0.8rem);
 }
 
 h2.large-title {
@@ -119,7 +166,7 @@ a {
 }
 
 p {
-    font-family: "acumin-variable", sans-serif;
+    /* font-family: "Acumin Variable Concept", sans-serif; */
     /* font-size: 1.25rem; */
     text-align: justify;
 }
@@ -163,7 +210,7 @@ figcaption {
 }
 
 .bold {
-    font-weight: 600;
+    font-weight: 1000;
 }
 
 .italic {
@@ -176,6 +223,29 @@ figcaption {
 
 .list-item {
     letter-spacing: .039em;
+}
+
+.hr-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hr-line {
+    flex-direction: column;
+}
+
+.hr-line > span {
+    height: 1px;
+    width: 100%;
+    background-color: var(--gray);
+    opacity: .3;
+}    
+
+@media screen and (min-width: 740px) {
+    .hr-line {
+        flex-direction: row;
+    }
 }
 
 /* HEADER */
@@ -228,14 +298,15 @@ figcaption {
 .nav-list {
     position: relative;
     margin: auto;
+    width: 90%;
     
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 1rem;
 
     text-transform: uppercase;
-    font-family: "Albra Grotesk Medium-Traced-Web";
-    font-size: var(--font-size-2);
+    font-family: var(--font-family-nav);
+    font-size: var(--font-size-nav);
 }
 
 .nav-link {
@@ -255,6 +326,7 @@ figcaption {
 
 .nav-link--wrapper {
     display: flex;
+    gap: .5rem;
 }
 
 .nav-row span.one-row {
@@ -264,6 +336,7 @@ figcaption {
 .nav-row span.two-rows {
     display: inline;
     width: 100%;
+    height: 78%;
     border: 0.7px solid var(--gray);
 }
 
@@ -296,10 +369,15 @@ figcaption {
 
 .header-graphic {
     width: 70%;
-    margin: auto;
+    display: block;
+    margin: 2rem auto;
 }
 
 @media screen and (min-width: 880px) {
+    .nav-list {
+        width: 75vw;
+    }
+
     .nav-row {
         flex-direction: row;
     }
@@ -317,6 +395,7 @@ figcaption {
 
     .header-graphic {
         width: 50%;
+        /* margin: auto; */
     }
 
     .nav-link--wrapper {
@@ -327,8 +406,26 @@ figcaption {
 /* HISTORY SECTION */
 .section-row {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     gap: 8rem;
+    overflow: hidden;
+}
+
+.section-row:nth-child(1) {
+    position: relative;
+}
+
+.section-row:nth-child(1)::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 15%;
+    background-color: var(--gray);
+    left: 0%;
+    bottom: 20%;
+    z-index: -1;
+    opacity: .3;
 }
 
 .section-row:nth-child(2) {
@@ -336,11 +433,27 @@ figcaption {
     gap: 2rem;
     background-color: var(--orange);
     padding: var(--min-padding) var(--min-padding);
+
+    position: relative;
     /* margin-top: 3rem; */
 }
 
+.section-row:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    background: url(img/history-graphic.svg);
+    height: 60%;
+    width: 40%;
+    right: -5%;
+    top: 30%;
+    background-origin: border-box;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
 .history-graphic {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     padding: 0 var(--min-padding);
 }
 
@@ -352,6 +465,20 @@ figcaption {
     gap: 4rem;
 
     text-align: center;
+
+    position: relative;
+}
+
+.history-title--wrapper::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background-color: var(--gray);
+    left: -35%;
+    top: 35%;
+    z-index: -1;
+    opacity: .3;
 }
 
 .history-title--wrapper h2 {
@@ -365,13 +492,14 @@ figcaption {
 }
 
 .history-section figure > img {
-    width: 80vw;
+    width: 90vw;
 }
 
 @media screen and (min-width: 740px) {
     .section-row {
         flex-direction: row;
         gap: 0;
+        padding: 0 var(--min-padding);
     }
     
     .section-row:nth-child(2) {
@@ -379,7 +507,8 @@ figcaption {
     }
 
     .history-graphic {
-        width: 45%;
+        width: 30%;
+        padding: 0;
     }
     
     .history-title--wrapper {
@@ -393,7 +522,7 @@ figcaption {
     }
 
     .section-row > p {
-        width: 30%;
+        width: 25%;
     }
 
 }
@@ -413,6 +542,7 @@ figcaption {
     width: 100%;
     gap: 1rem;
     max-width: 1500px;
+    padding: var(--min-padding);
 } 
 
 .energy-grid--container > *:not(figure) {
@@ -449,6 +579,7 @@ figcaption {
     width: 100%;
     text-align: right;
     position: relative;
+    padding: 0 var(--min-padding);
     /* margin-bottom: 3rem; */
 }
 
@@ -468,7 +599,8 @@ figcaption {
     bottom: 0;
     
     background-color: var(--gray);
-    width: 100%;
+    width: 90%;
+    left: 5%;
     height: 1px;
     z-index: -1;
 }
@@ -509,6 +641,9 @@ figcaption {
         grid-row-start: 2;
         grid-column-start: 8;
         grid-column-end: 16;
+
+        font-size: calc(var(--font-size-3) / 2);
+        letter-spacing: .2rem;
     }
 
     .energy-section p:nth-of-type(1) {
@@ -607,6 +742,7 @@ figcaption {
         margin-right: var(--min-padding);
         margin-left: 0;
         margin-bottom: 3rem;
+        padding: 0;
     }
 
     .timeline::before {
@@ -614,6 +750,7 @@ figcaption {
         content: '';
         top: 4%;
         bottom: 5.5%;
+        left: 100%;
     
         background-color: var(--gray);
         width: 1px;
@@ -692,7 +829,7 @@ figcaption {
     }
 
     .energy-section h2 {
-        grid-column-start: 2;
+        grid-column-start: 3;
     }
 
     .energy-section h3 {
@@ -775,7 +912,7 @@ figcaption {
 
 @media screen and (min-width: 1400px) {
     .energy-section h3 {
-        grid-column-start: 9;
+        /* grid-column-start: ; */
         grid-column-end: 15;
     }
 
@@ -834,17 +971,17 @@ figcaption {
 .projects-section {
     background-image: url(img/projetos.svg);
     background-repeat: no-repeat;
-    background-size: 90%;
-    background-origin: content-box;
+    background-size: 70%;
+    background-origin: padding-box;
     background-position-y: 70%;
 }
 
-.services-section h2,
-.projects-section h2 {
-    text-align: right;
-    margin: 0 auto;
+.services-section h3,
+.projects-section h3,
+.suppliers-section h3 {
+    text-align: center;
 }
-
+/* 
 .suppliers-section h2,
 .projects-section h2 {
     overflow-wrap: break-word;
@@ -854,20 +991,28 @@ figcaption {
     hyphenate-character: "_";
     text-align: left;
     margin-bottom: 2rem;
-}
+} */
 
-.projects-section h2.small-title {
+.projects-section h2 {
     text-align: center;
+    margin: 3rem auto;
 }
 
 @media screen and (min-width: 740px) {
-    .projects-section h2 {
-        text-align: right;
-        margin-bottom: 0;
+    .services-section h3,
+    .projects-section h3,
+    .suppliers-section h3 {
+        text-align: left;
     }
 
-    .projects-section h2.small-title {
-        text-align: left;
+    .projects-section {
+        background-origin: content-box;
+        background-size: 90%;
+        background-position-y: 55%;
+    }
+
+    .projects-section h2 {
+        text-align: right;
     }
 }
 
@@ -880,6 +1025,7 @@ figcaption {
     background-position-x: 80%;
     
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -911,12 +1057,18 @@ figcaption {
     display: inline-block;
 }
 
+@media screen and (min-width: 740px) {
+    .clients-title--wrapper {
+        flex-direction: row;
+    }
+}
 /* SUPPLIERS SECTION */
 .suppliers-section h3 {
     position: relative;
+    white-space: nowrap;
 }
 
-.suppliers-section h3::after {
+/* .suppliers-section h3::after {
     position: absolute;
     content: '';
     width: 50%;
@@ -924,7 +1076,7 @@ figcaption {
     top: 50%;
     left: 40%;
     background-color: var(--gray);
-}
+} */
 
 .logos--grid {
     width: 80%;
@@ -932,13 +1084,21 @@ figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    column-gap: 4rem;
+    row-gap: 2rem;
     flex-wrap: wrap;
 }
 
 .logos--grid img {
-    width: auto;
-    height: clamp(5rem, 4.153rem + 2.712vw, 7rem);
+    height: auto;
+    width: clamp(8rem, 7.153rem + 2.712vw, 10rem);
+}
+
+@media screen and (min-width: 740px) {
+    .logos--grid {
+        width: 80%;
+        gap: 4rem;
+    }
 }
 
 /* SERVICES SECTION */
@@ -950,7 +1110,7 @@ figcaption {
     margin-bottom: 2rem;
 }
 
-.services-section h2::before {
+/* .services-section h2::before {
     position: absolute;
     content: '';
     background-color: var(--gray);
@@ -958,7 +1118,7 @@ figcaption {
     height: 1px;
     top: 50%;
     left: 0;
-}
+} */
 
 .list-item {
     font-size: var(--font-size-5);
@@ -969,7 +1129,7 @@ figcaption {
     width: 100%;
     overflow-x: hidden;
 }
-
+/* 
 .list-item::after {
     position: absolute;
     content: '';
@@ -977,8 +1137,13 @@ figcaption {
     width: 100%;
     height: 1px;
     top: 50%;
-}
+} */
 
+@media screen and (min-width: 740px) {
+    .services-section .hr-line > span {
+        display: block;
+    }
+}
 /* STRUCTURE SECTION */
 .structure-section {
     min-height: 40vh;
@@ -987,14 +1152,20 @@ figcaption {
 
 .structure-text--wrapper {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.structure-text--wrapper > *:not(.structure-graphic) {
+    flex: 1;
 }
 
 .structure-section h2 {
-    margin-bottom: 2rem;
+    margin: 0;
+    /* margin-bottom: 2rem; */
 }
 
 .structure-text--wrapper small {
@@ -1003,13 +1174,14 @@ figcaption {
 }
 
 .structure-graphic {
-    width: 7rem;
+    width: clamp(5rem, 4.153rem + 2.712vw, 7rem);
     align-self: center;
 }
 
 /* PHOTO SECTION */
 .photo-section > div:nth-child(1) {
-    border: 1px solid var(--gray);
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
     padding-top: 2rem;
     padding-bottom: 2rem
 }
